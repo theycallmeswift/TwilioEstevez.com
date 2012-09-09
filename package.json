@@ -1,0 +1,27 @@
+{
+  "name": "twilioestevez.com",
+  "version": "0.0.0",
+  "description": "A twilio app that sends you Emilio Estevez jokes on the daily.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "Emilio",
+    "Estevez",
+    "Twilio",
+    "Funny"
+  ],
+  "author": "Swift <swift@sendgrid.com>",
+  "license": "Beerware",
+  "dependencies": {
+    "express": "~3.0.0rc4",
+    "mongodb": "~1.1.6",
+    "twilio-js": "~0.1.1"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  }
+}
