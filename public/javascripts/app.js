@@ -1,40 +1,26 @@
 (function($){  
   $(function(){
     $(document).foundationMediaQueryViewer();
-    
+
     $(document).foundationAlerts();
     $(document).foundationAccordion();
     $(document).tooltips();
     $('input, textarea').placeholder();
-    
-    
-    
     $(document).foundationButtons();
-    
-    
-    
     $(document).foundationNavigation();
-    
-    
-    
     $(document).foundationCustomForms();
-    
-    
-    
-      
-      $(document).foundationTabs({callback:$.foundation.customForms.appendCustomMarkup});
-      
-    
-    
-    
-    $("#featured").orbit();
-    
-    
-    // UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE8 SUPPORT AND ARE USING .block-grids
-    // $('.block-grid.two-up>li:nth-child(2n+1)').css({clear: 'left'});
-    // $('.block-grid.three-up>li:nth-child(3n+1)').css({clear: 'left'});
-    // $('.block-grid.four-up>li:nth-child(4n+1)').css({clear: 'left'});
-    // $('.block-grid.five-up>li:nth-child(5n+1)').css({clear: 'left'});
+
+    $('#send_email').click(function(event) {
+      event.preventDefault();
+
+      var email = $("#email").val();
+
+      $.post('/email', { email: email }, function(res) {
+
+        $('#email_form').html("<p class='center'><strong>Success! Check your inbox for a <em>hilarious</em> Emilio Estevez joke.</strong></p>");
+
+      });
+    });
   });
   
 })(jQuery);

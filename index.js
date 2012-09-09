@@ -3,6 +3,8 @@ var express = require('express')
   , db = require('./lib/db')
   , app = express()
   , Twilio = require('twilio-js')
+  , SendGrid = require('sendgrid').SendGrid
+  , sg = new SendGrid(process.env.SENDGRID_USER, process.env.SENDGRID_PASS)
   , port = process.env.PORT || 3000;
 
 app.configure(function() {
@@ -42,6 +44,30 @@ app.post('/api/v1/jokes', function(req, res) {
     res.statusCode = 406;
     res.send({ status: "ERROR" });
   }
+});
+
+app.post('/email', function(req, res) {
+  var email = req.body.email;
+
+  db.findRandomJoke(function(err, joke) {
+    if(err) return next(err);
+    if(!joke) res.statusCode = 404;
+
+    sg.send({
+      to: email,
+      from: 'emilio@twilioestevez.com',
+      subject: joke.question,
+      text: joke.answer
+    }, function(suc, message) {
+      if(!suc) {
+        console.log(message);
+        res.statusCode = 500;
+        return res.end();
+      }
+
+      res.send({ status: "OK" });
+    });
+  });
 });
 
 db.connect(config.mongodb, function(err) {
