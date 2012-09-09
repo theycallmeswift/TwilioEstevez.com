@@ -1,0 +1,57 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+.center {
+  text-align: center;
+}
+
+span.code {
+  background: #F2F2F2;
+  border: solid 1px #E6E6E6;
+  padding: 2px;
+}
+
+.red {
+  color: red;
+}
+
+.polaroid {
+  border: solid 1px #CCC;
+  -moz-box-shadow: 1px 1px 5px #999;
+  -webkit-box-shadow: 1px 1px 5px #999;
+  box-shadow: 1px 1px 5px #999;
+  padding: 5px;
+}
+
+
+/* -----------------------------------------
+   Home
+----------------------------------------- */
+
+#emilio {
+  width: 300px;
+}
+
+.powered-by img {
+  margin: 10px 0;
+  width: 225px;
+}
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+

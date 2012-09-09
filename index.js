@@ -23,7 +23,7 @@ app.get(/^\/api\/v1\/jokes\/random(.*)?$/, function(req, res, next) {
       });
       res.send(xml);
     } else {
-      res.send(joke);
+      res.send({ id: joke._id, question: joke.question, answer: joke.answer });
     }
   });
 });

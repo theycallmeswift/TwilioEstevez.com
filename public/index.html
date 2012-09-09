@@ -1,11 +1,128 @@
-<!doctype html>
-<html>
-  <head>
-    <title>TwilioEstevez.com</title>
-  </head>
-  <body>
-    <h1>TwilioEstevez.com</h1>
-    <p>Docs to come!</p>
+<!DOCTYPE html>
 
-  </body>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>TwilioEstevez.com</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="stylesheets/foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="/stylesheets/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheets/app.css">
+
+  <script src="/javascripts/modernizr.foundation.js"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <div class="row">
+    <div class="two columns">
+      <img src="http://status.twilio.com/images/logo.png" alt="Twilio logo" />
+    </div>
+    <div class="ten columns">
+      <h2>Twilio Estevez</h2>
+      <p>Need Emilio Estevez jokes on the fly? There's an API for that!</p>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="eight columns">
+
+      <!-- Grid Example -->
+      <div class="row">
+        <div class="twelve columns">
+          <h3>About Us</h3>
+          <p>  Hundreds of monkeys at keyboards spend their days pouring over the countless Emilio Estevez jokes that we receive to find the best content for you.  Appreciate that shit and enjoy it as Emilio would want you to.</p>
+          <p class="center">
+            <img id="emilio" class="polaroid" src="http://d1tp7nx49eepfb.cloudfront.net/wp-content/uploads/2011/05/emilio_estevez.jpg" alt="emilio" />
+            <br />
+            <em><strong>Q:</strong> What do you call Emilio Estevez when he's working on an API?</em><br />
+            <em><strong>A:</strong> Emilio REST-evez</em>
+          </p>
+
+
+        </div>
+
+        <div class="twelve columns">
+          <h3>The API</h3>
+          <p>Although the Twilio Estevez API is relatively simple on the outside, some incredibly complex calculations and analysis happening in the background.</p>
+
+          <h4>GET a random joke</h4>
+          <h5 class="subheader">/api/v1/jokes/random</h5>
+          <p>Use this endpoint to get a random Emilio Estevez joke.  Really, it's that simple.  By default, the API responds with JSON, but if you specify a <span class="code">.xml</span> ending you can get the response in Twiml format.</p>
+          <h6>URL:</h6>
+          <div class="panel">
+            <p><a href="/api/v1/jokes/random.json">http://twilioestevez.com/api/v1/jokes/random</a></p>
+          </div>
+
+          <h6>Response: (JSON)</h6>
+          <div class="panel">
+            <pre>
+{
+  "id": "504bbdb1c085772517f6db47",
+  "question": "What do you call Emilio Estevez when he's naked?",
+  "answer": "Emilio Undressed-evez"
+}
+            </pre>
+          </div>
+
+          <h6>Response: (XML)</h6>
+          <div class="panel">
+            <pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Response&gt;
+  &lt;Say&gt;What do you call Emilio Estevez when he's naked?&lt;/Say&gt;
+  &lt;Pause /&gt;
+  &lt;Say&gt;Emilio Undressed-evez&lt;/Say&gt;
+&lt;/Response&gt;
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="four columns">
+      <h4>Need a laugh?</h4>
+      <p>In a hurry for an Emilio Estevez joke? Don't worry, we've got you covered.  Just give the number written below a ring for some instant gratification!</p>
+      <div class="panel center red">
+        <h4>(347) 868-6698</h4>
+      </div>
+
+      <h4>Powered by</h4>
+
+      <div class="powered-by">
+        <a href="http://sendgrid.com">
+          <img src="https://raw.github.com/theycallmeswift/sendgrid-satchel/master/logos/large/white-tagline.jpg" alt="SendGrid" />
+        </a>
+        <a href="http://twilio.com">
+          <img src="http://www.twilio.com/packages/company/img/logos_downloadable_logobrand.png" alt="Twilio" />
+        </a>
+        <a href="http://comedyhackday.org">
+          <img src="http://comedyhackday.org/img/lettering.png" alt="Comedy Hack Day" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="javascripts/foundation.min.js"></script>
+  <script src="javascripts/app.js"></script>
+</body>
 </html>
